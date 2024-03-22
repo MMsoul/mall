@@ -26,7 +26,7 @@ import java.util.Map;
 @Controller
 @Api(tags = "UmsMemberController")
 @Tag(name = "UmsMemberController", description = "会员登录注册管理")
-@RequestMapping("/sso")
+@RequestMapping("/member")
 public class UmsMemberController {
     @Value("${jwt.tokenHeader}")
     private String tokenHeader;
@@ -40,8 +40,8 @@ public class UmsMemberController {
     @ResponseBody
     public CommonResult register(@RequestParam String username,
                                  @RequestParam String password,
-                                 @RequestParam String telephone,
-                                 @RequestParam String authCode) {
+                                 @RequestParam(required = false) String telephone,
+                                 @RequestParam(required = false) String authCode) {
         memberService.register(username, password, telephone, authCode);
         return CommonResult.success(null,"注册成功");
     }

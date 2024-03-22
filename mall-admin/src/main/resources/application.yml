@@ -57,6 +57,15 @@ secure:
       - /admin/info
       - /admin/logout
       - /minio/upload
+      - /**/*.map
+      - /favicon.ico
+      - /druid/**
+      - /actuator/**
+      - /sso/**
+      - /home/**
+      - /product/**
+      - /brand/**
+      - /alipay/**
 
 aliyun:
   oss:
