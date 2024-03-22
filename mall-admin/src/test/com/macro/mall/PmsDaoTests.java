@@ -1,11 +1,11 @@
-package com.macro.mall;
+package com.mmm.mall;
 
 
 import cn.hutool.json.JSONUtil;
-import com.macro.mall.dao.PmsMemberPriceDao;
-import com.macro.mall.dao.PmsProductDao;
-import com.macro.mall.dto.PmsProductResult;
-import com.macro.mall.model.PmsMemberPrice;
+import com.mmm.mall.dao.PmsMemberPriceDao;
+import com.mmm.mall.dao.PmsProductDao;
+import com.mmm.mall.dto.PmsProductResult;
+import com.mmm.mall.model.PmsMemberPrice;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
