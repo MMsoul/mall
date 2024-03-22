@@ -56,6 +56,8 @@ public class UmsAdminServiceImpl implements UmsAdminService {
     private UmsAdminRoleRelationDao adminRoleRelationDao;
     @Autowired
     private UmsAdminLoginLogMapper loginLogMapper;
+    @Autowired
+    private UmsMemberServiceImpl umsMemberService;
 
     @Override
     public UmsAdmin getAdminByUsername(String username) {
@@ -269,6 +271,12 @@ public class UmsAdminServiceImpl implements UmsAdminService {
             List<UmsResource> resourceList = getResourceList(admin.getId());
             return new AdminUserDetails(admin,resourceList);
         }
+        UserDetails userDetails = umsMemberService.loadUserByUsername(username);
+        
+        if (userDetails != null) {
+            return userDetails;
+        }
+
         throw new UsernameNotFoundException("用户名或密码错误");
     }
 

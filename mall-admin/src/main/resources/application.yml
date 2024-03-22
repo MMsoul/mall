@@ -61,7 +61,7 @@ secure:
       - /favicon.ico
       - /druid/**
       - /actuator/**
-      - /sso/**
+      - /member/**
       - /home/**
       - /product/**
       - /brand/**
