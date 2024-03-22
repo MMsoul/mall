@@ -10,13 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>mall-common</module>
-        <module>mall-mbg</module>
-        <module>mall-security</module>
-        <module>mall-demo</module>
         <module>mall-admin</module>
-        <module>mall-search</module>
-        <module>mall-portal</module>
     </modules>
 
     <parent>
@@ -52,7 +46,6 @@
         <jaxb-api.version>2.3.1</jaxb-api.version>
         <mall-common.version>1.0-SNAPSHOT</mall-common.version>
         <mall-mbg.version>1.0-SNAPSHOT</mall-mbg.version>
-        <mall-security.version>1.0-SNAPSHOT</mall-security.version>
     </properties>
 
     <dependencies>
@@ -103,12 +96,6 @@
                 <groupId>com.macro.mall</groupId>
                 <artifactId>mall-mbg</artifactId>
                 <version>${mall-mbg.version}</version>
-            </dependency>
-            <!--mall安全模块-->
-            <dependency>
-                <groupId>com.macro.mall</groupId>
-                <artifactId>mall-security</artifactId>
-                <version>${mall-security.version}</version>
             </dependency>
             <!--MyBatis分页插件starter-->
             <dependency>
